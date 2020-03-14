@@ -6,6 +6,7 @@
 #include <boost/multiprecision/cpp_int.hpp>
 #include <boost/integer/common_factor.hpp>
 
+
 // Set up the namespace for the boost variables
 namespace mp = boost::multiprecision;
 
@@ -69,8 +70,8 @@ bool Pollard::isPrimeBF(LARGEINT n, LARGEINT &divisor) {
  *
  *
  **********************************************************************************************/
-
 LARGEINT Pollard::calcPollardsRho(LARGEINT n) {
+
    if (n <= 3){
       return n;
    }
@@ -245,7 +246,7 @@ void Pollard::printPrimes(){
  * Get a number from the terminal and perform pollards rho on it. 
  **/ 
 int main(){
-    LARGEINT find = 17446744073709551617;
+    LARGEINT find("463463374607431768211457");
 
     Pollard solver = Pollard(find);
     solver.factor();

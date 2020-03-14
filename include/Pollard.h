@@ -19,13 +19,13 @@ namespace mp = boost::multiprecision;
  **/
 
 /* "UNSIGNED int type to hold original value and calculations" */
-#define LARGEINT unsigned long long int
+#define LARGEINT mp::uint128_t
 
 /* "UNSIGNED int twice as large as LARGEINT (bit-wise)" */
-#define LARGEINT2X mp::uint128_t
+#define LARGEINT2X mp::uint256_t
 
 /* "SIGNED int made of twice the bits as LARGEINT2X" */
-#define LARGESIGNED2X mp::int256_t
+#define LARGESIGNED2X mp::int512_t
 
 /**
  * Src:
